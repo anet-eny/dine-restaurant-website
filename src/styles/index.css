@@ -1,1 +1,95 @@
 @import "tailwindcss";
+
+@theme {
+  --font-family-spartan: "League Spartan Variable", sans-serif;
+
+  /* Heading XL - 80px, 80px line, -1 character spacing */
+  --font-size-heading-xl: clamp(4rem, 5vw + 2rem, 5rem);
+  --line-height-heading-xl: 5rem;
+  --letter-spacing-heading-xl: -0.0625em;
+  --font-weight-heading-xl: 300;
+
+  /* Heading L - 48px, 48px line, -0.5 character spacing */
+  --font-size-heading-l: clamp(2.5rem, 3vw + 1rem, 3rem);
+  --line-height-heading-l: 3rem;
+  --letter-spacing-heading-l: -0.03125em;
+  --font-weight-heading-l: 700;
+
+  /* Heading M - 20px, 24px line, -0.25 character spacing */
+  --font-size-heading-m: clamp(1.125rem, 1.5vw + 0.5rem, 1.25rem);
+  --line-height-heading-m: 1.5rem;
+  --letter-spacing-heading-m: -0.015625em;
+  --font-weight-heading-m: 700;
+
+  /* Heading S - 17px, 28px line, +2.5 character spacing */
+  --font-size-heading-s: clamp(0.9375rem, 1vw + 0.5rem, 1.0625rem);
+  --line-height-heading-s: 1.75rem;
+  --letter-spacing-heading-s: 0.15625em;
+  --font-weight-heading-s: 600;
+
+  /* Body 1 - 20px, 30px line */
+  --font-size-body-1: 1.25rem;
+  --line-height-body-1: 1.875rem;
+  --font-weight-body-1: 400;
+
+  /* Body 2 - 16px, 26px line */
+  --font-size-body-2: 1rem;
+  --line-height-body-2: 1.625rem;
+  --font-weight-body-2: 400;
+
+  /* Primary Colors */
+  --color-beaver: oklch(51% 0.04 27);
+  --color-cod-gray: oklch(7% 0 0);
+
+  /* Secondary Colors */
+  --color-mirage: oklch(13% 0.02 234);
+  --color-ebony-clay: oklch(21% 0.02 218);
+  --color-shuttle-gray: oklch(42% 0.01 217);
+}
+
+@utility heading-xl {
+  font-family: var(--font-family-spartan);
+  font-size: var(--font-size-heading-xl);
+  line-height: var(--line-height-heading-xl);
+  letter-spacing: var(--letter-spacing-heading-xl);
+  font-weight: var(--font-weight-heading-xl);
+}
+
+@utility heading-l {
+  font-family: var(--font-family-spartan);
+  font-size: var(--font-size-heading-l);
+  line-height: var(--line-height-heading-l);
+  letter-spacing: var(--letter-spacing-heading-l);
+  font-weight: var(--font-weight-heading-l);
+}
+
+@utility heading-m {
+  font-family: var(--font-family-spartan);
+  font-size: var(--font-size-heading-m);
+  line-height: var(--line-height-heading-m);
+  letter-spacing: var(--letter-spacing-heading-m);
+  font-weight: var(--font-weight-heading-m);
+}
+
+@utility heading-s {
+  font-family: var(--font-family-spartan);
+  font-size: var(--font-size-heading-s);
+  line-height: var(--line-height-heading-s);
+  letter-spacing: var(--letter-spacing-heading-s);
+  font-weight: var(--font-weight-heading-s);
+  text-transform: uppercase;
+}
+
+@utility body-1 {
+  font-family: var(--font-family-spartan);
+  font-size: var(--font-size-body-1);
+  line-height: var(--line-height-body-1);
+  font-weight: var(--font-weight-body-1);
+}
+
+@utility body-2 {
+  font-family: var(--font-family-spartan);
+  font-size: var(--font-size-body-2);
+  line-height: var(--line-height-body-2);
+  font-weight: var(--font-weight-body-2);
+}
