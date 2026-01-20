@@ -1,13 +1,24 @@
+const images = import.meta.glob("../assets/**/*.{jpg,jpeg,png,webp}", {
+  eager: true,
+  query: "?url",
+  import: "default",
+});
+
 export const getResponsiveImages = (basePath) => {
+  const get = (suffix) => {
+    const key = `../assets/${basePath}-${suffix}.jpg`;
+    if (!images[key]) {
+      console.warn(`Missing image: ${key}`);
+    }
+    return images[key];
+  };
+
   return {
-    desktop: new URL(`../assets/${basePath}-desktop.jpg`, import.meta.url).href,
-    desktop2x: new URL(`../assets/${basePath}-desktop@2x.jpg`, import.meta.url)
-      .href,
-    tablet: new URL(`../assets/${basePath}-tablet.jpg`, import.meta.url).href,
-    tablet2x: new URL(`../assets/${basePath}-tablet@2x.jpg`, import.meta.url)
-      .href,
-    mobile: new URL(`../assets/${basePath}-mobile.jpg`, import.meta.url).href,
-    mobile2x: new URL(`../assets/${basePath}-mobile@2x.jpg`, import.meta.url)
-      .href,
+    desktop: get("desktop"),
+    desktop2x: get("desktop@2x"),
+    tablet: get("tablet"),
+    tablet2x: get("tablet@2x"),
+    mobile: get("mobile"),
+    mobile2x: get("mobile@2x"),
   };
 };
