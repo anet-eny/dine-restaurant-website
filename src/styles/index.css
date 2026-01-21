@@ -4,9 +4,9 @@
   --font-family-spartan: "League Spartan Variable", sans-serif;
 
   /* Heading XL - 80px, 80px line, -1 character spacing */
-  --font-size-heading-xl: clamp(4rem, 5vw + 2rem, 5rem);
-  --line-height-heading-xl: 5rem;
-  --letter-spacing-heading-xl: -0.0625em;
+  --font-size-heading-xl: clamp(3rem, 5vw + 2rem, 5rem);
+  --line-height-heading-xl: clamp(2.5rem, 5vw + 1rem, 5rem);
+  --letter-spacing-heading-xl: clamp(-0.025em, -0.5vw - 0.01em, -0.0625em);
   --font-weight-heading-xl: 300;
 
   /* Heading L - 48px, 48px line, -0.5 character spacing */
