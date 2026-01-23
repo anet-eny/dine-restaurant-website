@@ -32,14 +32,20 @@
   --line-height-body: clamp(1.625rem, 2vw + 1rem, 2.25rem);
   --font-weight-body: 400;
 
+  /* Button */
+  --font-size-button: clamp(0.9375rem, 0.5vw + 0.8rem, 1.125rem);
+  --line-height-button: 1rem;
+  --letter-spacing-button: 0.15625em;
+  --font-weight-button: 600;
+
   /* Primary Colors */
-  --color-beaver: oklch(51% 0.04 27);
-  --color-cod-gray: oklch(7% 0 0);
+  --color-beaver: oklch(61.94% 0.0526 60.49); /* #9e7f66 */
+  --color-cod-gray: oklch(17.76% 0 89.88); /* #111111 */
 
   /* Secondary Colors */
-  --color-mirage: oklch(13% 0.02 234);
-  --color-ebony-clay: oklch(21% 0.02 218);
-  --color-shuttle-gray: oklch(42% 0.01 217);
+  --color-mirage: oklch(22.09% 0.0353 278.24); /* #17192b */
+  --color-ebony-clay: oklch(28.77% 0.0242 261.14); /* #242b37 */
+  --color-shuttle-gray: oklch(51.11% 0.0317 260.26); /* #5c6779 */
 }
 
 @utility heading-xl {
@@ -75,9 +81,18 @@
   text-transform: uppercase;
 }
 
-@utility body {
+@utility body-text {
   font-family: var(--font-family-spartan);
   font-size: var(--font-size-body);
   line-height: var(--line-height-body);
   font-weight: var(--font-weight-body);
+}
+
+@utility button-text {
+  font-family: var(--font-family-spartan);
+  font-size: var(--font-size-button);
+  line-height: var(--line-height-button);
+  letter-spacing: var(--letter-spacing-button);
+  font-weight: var(--font-weight-button);
+  text-transform: uppercase;
 }
