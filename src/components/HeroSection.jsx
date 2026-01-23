@@ -5,8 +5,8 @@ const LOGO_ALT = "dine";
 
 export default function HeroSection({ title, description, buttonText, image }) {
   return (
-    <section className="relative min-h-200 flex items-center justify-center lg:justify-start bg-cod-gray px-[clamp(2rem,5vw,8rem)]">
-      <picture className="absolute inset-0">
+    <header className="relative min-h-200 flex items-center justify-center lg:justify-start bg-cod-gray px-[clamp(2rem,5vw,8rem)]">
+      <picture className="absolute inset-0" aria-hidden="true">
         <source
           media="(min-width: 64rem)"
           srcSet={`${image.desktop} 1x, ${image.desktop2x} 2x`}
@@ -18,7 +18,7 @@ export default function HeroSection({ title, description, buttonText, image }) {
         <img
           src={image.mobile}
           srcSet={`${image.mobile} 1x, ${image.mobile2x} 2x`}
-          alt={title}
+          alt=""
           className="w-full h-full object-contain lg:object-cover"
         />
       </picture>
@@ -30,6 +30,6 @@ export default function HeroSection({ title, description, buttonText, image }) {
           {buttonText}
         </Button>
       </div>
-    </section>
+    </header>
   );
 }
