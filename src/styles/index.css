@@ -10,9 +10,9 @@
   --font-weight-heading-xl: 300;
 
   /* Heading L */
-  --font-size-heading-l: clamp(2.5rem, 3vw + 1rem, 3rem);
-  --line-height-heading-l: 3rem;
-  --letter-spacing-heading-l: -0.03125em;
+  --font-size-heading-l: clamp(2rem, 3vw + 1rem, 3rem);
+  --line-height-heading-l: clamp(2.25rem, 3.5vw + 1rem, 3.5rem);
+  --letter-spacing-heading-l: clamp(-0.02em, -0.3vw, -0.03125em);
   --font-weight-heading-l: 700;
 
   /* Heading M */
