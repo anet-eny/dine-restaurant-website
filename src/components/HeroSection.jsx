@@ -1,11 +1,15 @@
-import logo from "../assets/logo.svg";
 import Button from "./Button";
+import logo from "../assets/logo.svg";
+import { PADDING } from "../utils/constants";
 
 const LOGO_ALT = "dine";
 
 export default function HeroSection({ title, description, buttonText, image }) {
   return (
-    <header className="relative min-h-200 lg:h-200 flex items-center lg:items-start justify-center lg:justify-start bg-cod-gray px-[clamp(2rem,5vw,8rem)]">
+    <header
+      className="relative min-h-200 lg:h-200 flex items-center lg:items-start justify-center lg:justify-start bg-cod-gray"
+      style={{ paddingInline: PADDING }}
+    >
       <picture className="absolute inset-0" aria-hidden="true">
         <source
           media="(min-width: 64rem)"
