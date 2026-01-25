@@ -1,3 +1,8 @@
+import patternCurveTopLeft from "../assets/patterns/pattern-curve-top-left.svg";
+import patternCurveTopRight from "../assets/patterns/pattern-curve-top-right.svg";
+import patternLines from "../assets/patterns/pattern-lines.svg";
+import patternDivide from "../assets/patterns/pattern-divide.svg";
+
 export default function FeatureCard({
   title,
   description,
@@ -5,6 +10,8 @@ export default function FeatureCard({
   imagePosition = "left",
 }) {
   const isImageLeft = imagePosition === "left";
+
+  const curvePattern = isImageLeft ? patternCurveTopRight : patternCurveTopLeft;
 
   return (
     <article
@@ -31,6 +38,16 @@ export default function FeatureCard({
             className="w-full h-auto object-cover [box-shadow:0_40px_100px_-20px_rgba(0,0,0,0.35)]"
           />
         </picture>
+
+        <img
+          src={curvePattern}
+          alt=""
+          aria-hidden="true"
+          className={`
+            hidden md:block absolute -z-10 md:w-[33vw] md:scale-200 lg:scale-120 lg:w-[60vw]
+            ${isImageLeft ? "top-1/3 left-0 md:-translate-y-10 lg:-translate-y-40" : "bottom-0 md:translate-y-20 lg:-translate-y-20 right-0"}
+          `}
+        />
       </div>
 
       <div className="flex-1 text-center lg:text-left">
