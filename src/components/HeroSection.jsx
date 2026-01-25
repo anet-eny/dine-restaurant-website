@@ -23,7 +23,7 @@ export default function HeroSection({ title, description, buttonText, image }) {
           src={image.mobile}
           srcSet={`${image.mobile} 1x, ${image.mobile2x} 2x`}
           alt=""
-          className="w-full h-full object-contain lg:object-cover"
+          className="w-full h-full object-contain object-top lg:object-cover"
         />
       </picture>
       <div className="relative flex flex-col items-center  lg:items-start justify-center lg:justify-start lg:max-w-120 text-white text-center lg:text-left mt-[clamp(4rem,5vw,6rem)] lg:h-full">
