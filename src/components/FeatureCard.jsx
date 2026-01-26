@@ -48,6 +48,14 @@ export default function FeatureCard({
             ${isImageLeft ? "top-1/3 left-0 md:-translate-y-20 lg:-translate-y-40" : "bottom-0 md:translate-y-5 lg:-translate-y-20 right-0"}
           `}
         />
+        {!isImageLeft && (
+          <img
+            src={patternLines}
+            alt=""
+            aria-hidden="true"
+            className="hidden md:block absolute bottom-0 z-20 right-0 -translate-x-6 -translate-y-82"
+          />
+        )}
       </div>
 
       <div className="flex-1 text-center lg:text-left md:px-10">
