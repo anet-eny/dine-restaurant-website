@@ -26,4 +26,32 @@ export const homeData = {
       imagePosition: "right",
     },
   ],
+  highlights: {
+    title: "A few highlights from our menu",
+    description:
+      "We cater for all dietary requirements, but here's a glimpse at some of our diner's favourites. Our menu is revamped every season.",
+    items: [
+      {
+        id: 1,
+        name: "Seared Salmon Fillet",
+        description:
+          "Our locally sourced salmon served with a refreshing buckwheat summer salad.",
+        image: getResponsiveImages("homepage/salmon"),
+      },
+      {
+        id: 2,
+        name: "Rosemary Filet Mignon",
+        description:
+          "Our prime beef served to your taste with a delicious choice of seasonal sides.",
+        image: getResponsiveImages("homepage/beef"),
+      },
+      {
+        id: 3,
+        name: "Summer Fruit Chocolate Mousse",
+        description:
+          "Creamy mousse combined with summer fruits and dark chocolate shavings.",
+        image: getResponsiveImages("homepage/chocolate"),
+      },
+    ],
+  },
 };
