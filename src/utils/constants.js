@@ -1,1 +1,1 @@
-export const PADDING = "clamp(2rem,5vw,8rem)";
+export const PADDING = "clamp(2rem,8vw,8rem)";
