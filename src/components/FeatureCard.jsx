@@ -51,6 +51,12 @@ export default function FeatureCard({
       </div>
 
       <div className="flex-1 text-center lg:text-left md:px-10">
+        <img
+          src={patternDivide}
+          alt=""
+          aria-hidden="true"
+          className="mx-auto lg:mx-0 mb-6 md:mb-10"
+        />
         <h2 className="heading-l font-bold mb-4 text-ebony-clay px-20 md:px-40 lg:px-0">
           {title}
         </h2>
