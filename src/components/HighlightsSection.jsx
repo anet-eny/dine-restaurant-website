@@ -7,7 +7,7 @@ export default function HighlightsSection({ title, description, items }) {
       className="relative z-5 flex flex-col bg-cod-gray text-white lg:-mt-15"
       style={{ padding: PADDING }}
     >
-      <div className="text-center px-10">
+      <div className="text-center px-10 md:px-20 lg:px-0">
         <img
           src={patternDivide}
           alt=""
