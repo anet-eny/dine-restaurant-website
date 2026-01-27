@@ -4,7 +4,7 @@ import { PADDING } from "../utils/constants";
 export default function HighlightsSection({ title, description, items }) {
   return (
     <section
-      className="flex flex-col bg-cod-gray text-white"
+      className="relative z-5 flex flex-col bg-cod-gray text-white lg:-mt-15"
       style={{ padding: PADDING }}
     >
       <div className="text-center px-10">

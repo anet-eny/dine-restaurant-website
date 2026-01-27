@@ -35,7 +35,7 @@ export default function FeatureCard({
             src={image.mobile}
             srcSet={`${image.mobile} 1x, ${image.mobile2x} 2x`}
             alt=""
-            className="w-full h-auto object-cover [box-shadow:0_40px_100px_-20px_rgba(0,0,0,0.35)]"
+            className="relative z-10 w-full h-auto object-cover [box-shadow:0_40px_100px_-20px_rgba(0,0,0,0.35)]"
           />
         </picture>
 
