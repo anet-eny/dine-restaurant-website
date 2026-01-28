@@ -1,4 +1,4 @@
-import { getResponsiveImages } from "../utils/imageHelpers";
+import { getResponsiveImages, getHighlightImages } from "../utils/imageHelpers";
 
 export const homeData = {
   hero: {
@@ -36,21 +36,21 @@ export const homeData = {
         name: "Seared Salmon Fillet",
         description:
           "Our locally sourced salmon served with a refreshing buckwheat summer salad.",
-        image: getResponsiveImages("homepage/salmon"),
+        image: getHighlightImages("homepage/salmon"),
       },
       {
         id: 2,
         name: "Rosemary Filet Mignon",
         description:
           "Our prime beef served to your taste with a delicious choice of seasonal sides.",
-        image: getResponsiveImages("homepage/beef"),
+        image: getHighlightImages("homepage/beef"),
       },
       {
         id: 3,
         name: "Summer Fruit Chocolate Mousse",
         description:
           "Creamy mousse combined with summer fruits and dark chocolate shavings.",
-        image: getResponsiveImages("homepage/chocolate"),
+        image: getHighlightImages("homepage/chocolate"),
       },
     ],
   },
