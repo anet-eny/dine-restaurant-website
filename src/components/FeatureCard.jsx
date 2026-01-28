@@ -53,7 +53,7 @@ export default function FeatureCard({
             src={patternLines}
             alt=""
             aria-hidden="true"
-            className="hidden md:block absolute bottom-0 z-20 right-0 -translate-x-6 -translate-y-82"
+            className="hidden md:block absolute bottom-0 z-20 right-0 -translate-x-6 -translate-y-92"
           />
         )}
       </div>
