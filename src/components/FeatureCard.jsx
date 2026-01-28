@@ -45,7 +45,7 @@ export default function FeatureCard({
           aria-hidden="true"
           className={`
             hidden md:block absolute -z-10 md:w-[33vw] md:scale-200 lg:scale-120 lg:w-[60vw]
-            ${isImageLeft ? "top-1/3 left-0 md:-translate-y-20 lg:-translate-y-40" : "bottom-0 md:translate-y-5 lg:-translate-y-20 right-0"}
+            ${isImageLeft ? "top-1/3 left-0 md:-translate-y-20 lg:-translate-y-40" : "bottom-0 md:-translate-y-10 lg:-translate-y-20 right-0"}
           `}
         />
         {!isImageLeft && (
