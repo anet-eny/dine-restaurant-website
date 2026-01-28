@@ -21,7 +21,7 @@ export default function HighlightCard({ name, description, image }) {
       </div>
       <div className="flex-1 text-center md:text-left">
         <h3 className="heading-m mb-2">{name}</h3>
-        <p className="body-text">{description}</p>
+        <p className="body-2-text">{description}</p>
       </div>
     </article>
   );
