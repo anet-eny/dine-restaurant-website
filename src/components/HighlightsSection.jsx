@@ -8,7 +8,7 @@ export default function HighlightsSection({ title, description, items }) {
       className="relative z-5 flex flex-col lg:flex-row lg:gap-20 bg-cod-gray text-white lg:-mt-15 lg:pt-45!"
       style={{ padding: PADDING }}
     >
-      <div className="text-center lg:text-left md:px-20 lg:px-0 mb-16">
+      <div className="lg:flex-2 text-center lg:text-left md:px-20 lg:px-0 mb-16">
         <img
           src={patternDivide}
           alt=""
@@ -18,7 +18,7 @@ export default function HighlightsSection({ title, description, items }) {
         <h2 className="heading-l mb-4">{title}</h2>
         <p className="body-text">{description}</p>
       </div>
-      <div className="space-y-8 md:space-y-12">
+      <div className="lg:flex-3 space-y-8 md:space-y-12">
         {items.map((item) => (
           <HighlightCard key={item.id} {...item} />
         ))}
