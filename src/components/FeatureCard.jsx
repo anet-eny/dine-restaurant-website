@@ -58,7 +58,7 @@ export default function FeatureCard({
         )}
       </div>
 
-      <div className="flex-1 text-center lg:text-left px-10 md:px-20 lg:px-0">
+      <div className="flex-1 text-center lg:text-left md:px-20 lg:px-0">
         <img
           src={patternDivide}
           alt=""
