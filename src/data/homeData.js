@@ -54,4 +54,35 @@ export const homeData = {
       },
     ],
   },
+  eventsShowcase: {
+    events: [
+      {
+        id: 1,
+        label: "Family Gathering",
+        title: "Family Gathering",
+        description:
+          "We love catering for entire families. So please bring everyone along for a special meal with your loved ones. We'll provide a memorable experience for all.",
+        buttonText: "Book a table",
+        image: getResponsiveImages("homepage/family-gathering"),
+      },
+      {
+        id: 2,
+        label: "Special Events",
+        title: "Special Events",
+        description:
+          "Whether it's a romantic dinner or special date you're celebrating with others we'll look after you. We'll be sure to mark your special date with an unforgettable meal.",
+        buttonText: "Book a table",
+        image: getResponsiveImages("homepage/special-events"),
+      },
+      {
+        id: 3,
+        label: "Social Events",
+        title: "Social Events",
+        description:
+          "Are you looking to have a larger social event? No problem! We're more than happy to cater for big parties. We'll work with you to make your event a hit.",
+        buttonText: "Book a table",
+        image: getResponsiveImages("homepage/social-events"),
+      },
+    ],
+  },
 };
