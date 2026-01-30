@@ -2,6 +2,7 @@ import { homeData } from "./data/homeData";
 import FeaturesSection from "./components/FeaturesSection";
 import HeroSection from "./components/HeroSection";
 import HighlightsSection from "./components/HighlightsSection";
+import EventsShowcase from "./components/EventsShowcase";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <HeroSection {...homeData.hero} buttonText="book a table" />
       <FeaturesSection features={homeData.features} />
       <HighlightsSection {...homeData.highlights} />
+      <EventsShowcase {...homeData.eventsShowcase} />
     </div>
   );
 }
