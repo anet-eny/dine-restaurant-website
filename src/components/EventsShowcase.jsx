@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import Button from "./Button";
 import { PADDING } from "../utils/constants";
+import curvePattern from "../assets/patterns/pattern-curve-top-right.svg";
+import patternLines from "../assets/patterns/pattern-lines.svg";
 
 export default function EventsShowcase({ events }) {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -15,7 +17,10 @@ export default function EventsShowcase({ events }) {
   const activeEvent = events[activeIndex];
 
   return (
-    <section className="pt-20 pb-24" style={{ paddingInline: PADDING }}>
+    <section
+      className="relative pt-20 pb-24"
+      style={{ paddingInline: PADDING }}
+    >
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <picture className="block w-full h-full">
           <source
@@ -33,13 +38,25 @@ export default function EventsShowcase({ events }) {
             className="w-full h-full object-cover [box-shadow:0_40px_100px_-20px_rgba(0,0,0,0.35)]"
           />
         </picture>
+        <img
+          src={curvePattern}
+          alt=""
+          aria-hidden="true"
+          className="hidden md:block absolute -z-10 top-0 left-0 md:-translate-x-1/2 lg::-translate-x-1/3"
+        />
+        <img
+          src={patternLines}
+          alt=""
+          aria-hidden="true"
+          className="hidden md:block absolute top-0 left-0 md:translate-x-1/5 md:translate-y-1/2 lg:translate-x-1/3"
+        />
         <div className="flex flex-col">
           <nav className="flex flex-col md:flex-row lg:flex-col items-center lg:items-start text-center gap-3 md:gap-6 lg:gap-2 order-1 lg:order-2 lg:mt-8">
             {events.map((event, index) => (
               <button
                 key={event.id}
                 onClick={() => setActiveIndex(index)}
-                className={`relative px-4 py-2 heading-s uppercase transition-all duration-500 cursor-pointer ${
+                className={`relative px-6 lg:px-0 py-2 heading-s uppercase transition-all duration-500 cursor-pointer ${
                   index === activeIndex ? "text-neutral-600" : "opacity-50"
                 }`}
               >
