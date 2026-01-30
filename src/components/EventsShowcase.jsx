@@ -33,27 +33,35 @@ export default function EventsShowcase({ events }) {
             className="w-full h-full object-cover [box-shadow:0_40px_100px_-20px_rgba(0,0,0,0.35)]"
           />
         </picture>
-        <nav className="flex flex-col md:flex-row lg:flex-col items-center gap-3 md:gap-6">
-          {events.map((event, index) => (
-            <button
-              key={event.id}
-              onClick={() => setActiveIndex(index)}
-              className={`relative text-left sm:text-center px-4 py-2 heading-s uppercase transition-all duration-500 cursor-pointer ${
-                index === activeIndex ? "text-neutral-600" : "opacity-50"
-              }`}
-            >
-              <span className="relative z-10">{event.label}</span>
-              {/* PODTRŽENÍ AKTIVNÍHO NADPISU */}
-              <span
-                className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-12 h-px bg-beaver transition-all duration-500 ${
-                  index === activeIndex
-                    ? "opacity-100 scale-x-100"
-                    : "opacity-0 scale-x-0"
+        <div className="flex flex-col">
+          <nav className="flex flex-col md:flex-row lg:flex-col items-center lg:items-start text-center gap-3 md:gap-6 lg:gap-2 order-1 lg:order-2 lg:mt-8">
+            {events.map((event, index) => (
+              <button
+                key={event.id}
+                onClick={() => setActiveIndex(index)}
+                className={`relative px-4 py-2 heading-s uppercase transition-all duration-500 cursor-pointer ${
+                  index === activeIndex ? "text-neutral-600" : "opacity-50"
                 }`}
-              />
-            </button>
-          ))}
-        </nav>
+              >
+                <span className="relative z-10">{event.label}</span>
+                <span
+                  className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-12 h-px bg-beaver transition-all duration-500 ${
+                    index === activeIndex
+                      ? "opacity-100 scale-x-100"
+                      : "opacity-0 scale-x-0"
+                  }`}
+                />
+              </button>
+            ))}
+          </nav>
+          <div className="flex flex-col items-center lg:items-start text-center lg:text-left text-ebony-clay gap-6 mt-10 order-2 lg:order-1">
+            <h2 className="heading-l ">{activeEvent.title}</h2>
+            <p className="body-text">{activeEvent.description}</p>
+            <Button theme="dark" className="mt-4">
+              {activeEvent.buttonText}
+            </Button>
+          </div>
+        </div>
       </div>
     </section>
   );
