@@ -8,7 +8,7 @@ import ReservationsCTA from "../components/ReservationsCTA";
 export default function Home() {
   return (
     <div className="max-w-8xl mx-auto">
-      <HeroSection {...homeData.hero} buttonText="book a table" />
+      <HeroSection {...homeData.hero} />
       <FeaturesSection features={homeData.features} />
       <HighlightsSection {...homeData.highlights} />
       <EventsShowcase {...homeData.eventsShowcase} />
