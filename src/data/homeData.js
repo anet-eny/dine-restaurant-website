@@ -85,4 +85,23 @@ export const homeData = {
       },
     ],
   },
+  reservationCTA: {
+    title: "Ready to make a reservation?",
+    buttonText: "Book a table",
+    buttonLink: "/reservations",
+    image: getResponsiveImages("homepage/ready-bg"),
+  },
+
+  footer: {
+    address: {
+      line1: "Marthwaite, Sedbergh",
+      line2: "Cumbria",
+      phone: "+00 44 123 4567",
+    },
+    openingTimes: {
+      title: "Open Times",
+      weekdays: "Mon - Fri: 09:00 AM - 10:00 PM",
+      weekend: "Sat - Sun: 09:00 AM - 11:30 PM",
+    },
+  },
 };
