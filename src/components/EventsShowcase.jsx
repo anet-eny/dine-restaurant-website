@@ -62,7 +62,7 @@ export default function EventsShowcase({ events }) {
               >
                 <span className="relative z-10">{event.label}</span>
                 <span
-                  className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-12 h-px bg-beaver transition-all duration-500 ${
+                  className={`absolute bottom-0 left-1/2 -translate-x-1/2 lg:-left-16 lg:translate-x-0 lg:top-[calc(50%-1px)] lg:-translate-y-1/2 w-12 h-px bg-beaver transition-all duration-500 ${
                     index === activeIndex
                       ? "opacity-100 scale-x-100"
                       : "opacity-0 scale-x-0"
