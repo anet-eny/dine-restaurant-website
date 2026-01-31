@@ -3,6 +3,7 @@ import FeaturesSection from "./components/FeaturesSection";
 import HeroSection from "./components/HeroSection";
 import HighlightsSection from "./components/HighlightsSection";
 import EventsShowcase from "./components/EventsShowcase";
+import ReservationsCTA from "./components/ReservationsCTA";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <FeaturesSection features={homeData.features} />
       <HighlightsSection {...homeData.highlights} />
       <EventsShowcase {...homeData.eventsShowcase} />
+      <ReservationsCTA {...homeData.reservationCTA} />
     </div>
   );
 }
