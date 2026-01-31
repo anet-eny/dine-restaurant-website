@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Button from "./Button";
+import { PADDING } from "../utils/constants";
 
 export default function ReservationsCTA({
   title,
@@ -8,7 +9,7 @@ export default function ReservationsCTA({
   image,
 }) {
   return (
-    <section className="relative">
+    <section className="relative py-20" style={{ paddingInline: PADDING }}>
       <picture className="absolute inset-0" aria-hidden="true">
         <source
           media="(min-width: 64rem)"
@@ -26,12 +27,10 @@ export default function ReservationsCTA({
         />
       </picture>
 
-      <div className="relative h-full flex items-center justify-between px-8 md:px-16 lg:px-24">
-        <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-light">
-          {title}
-        </h1>
+      <div className="relative flex flex-col lg:flex-row items-center justify-between gap-8">
+        <h1 className="text-white heading-l">{title}</h1>
         <Link to={buttonLink}>
-          <Button>{buttonText}</Button>
+          <Button theme="light">{buttonText}</Button>
         </Link>
       </div>
     </section>
