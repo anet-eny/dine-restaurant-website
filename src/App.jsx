@@ -1,19 +1,13 @@
-import { homeData } from "./data/homeData";
-import FeaturesSection from "./components/FeaturesSection";
-import HeroSection from "./components/HeroSection";
-import HighlightsSection from "./components/HighlightsSection";
-import EventsShowcase from "./components/EventsShowcase";
-import ReservationsCTA from "./components/ReservationsCTA";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
 
 function App() {
   return (
-    <div className="max-w-8xl mx-auto">
-      <HeroSection {...homeData.hero} buttonText="book a table" />
-      <FeaturesSection features={homeData.features} />
-      <HighlightsSection {...homeData.highlights} />
-      <EventsShowcase {...homeData.eventsShowcase} />
-      <ReservationsCTA {...homeData.reservationCTA} />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
