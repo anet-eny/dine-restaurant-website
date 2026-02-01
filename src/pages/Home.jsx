@@ -4,6 +4,7 @@ import HeroSection from "../components/HeroSection";
 import HighlightsSection from "../components/HighlightsSection";
 import EventsShowcase from "../components/EventsShowcase";
 import ReservationsCTA from "../components/ReservationsCTA";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <HighlightsSection {...homeData.highlights} />
       <EventsShowcase {...homeData.eventsShowcase} />
       <ReservationsCTA {...homeData.reservationCTA} />
+      <Footer {...homeData.footer} />
     </div>
   );
 }
