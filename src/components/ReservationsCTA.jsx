@@ -27,7 +27,7 @@ export default function ReservationsCTA({
         />
       </picture>
 
-      <div className="relative flex flex-col lg:flex-row items-center justify-between gap-8">
+      <div className="relative flex flex-col lg:flex-row items-center justify-between text-center gap-8">
         <h1 className="text-white heading-l">{title}</h1>
         <Link to={buttonLink}>
           <Button theme="light">{buttonText}</Button>
