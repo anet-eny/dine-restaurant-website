@@ -43,6 +43,12 @@
   --letter-spacing-button: 0.15625em;
   --font-weight-button: 600;
 
+  /* Footer */
+  --font-size-footer: clamp(0.875rem, 0.5vw + 0.7rem, 1rem);
+  --line-height-footer: clamp(1.75rem, 1.5vw + 1.2rem, 2rem);
+  --letter-spacing-footer: clamp(0.125em, 0.3vw + 0.09em, 0.125em);
+  --font-weight-footer: 400;
+
   /* Primary Colors */
   --color-beaver: oklch(61.94% 0.0526 60.49); /* #9e7f66 */
   --color-cod-gray: oklch(17.76% 0 89.88); /* #111111 */
@@ -106,5 +112,14 @@
   line-height: var(--line-height-button);
   letter-spacing: var(--letter-spacing-button);
   font-weight: var(--font-weight-button);
+  text-transform: uppercase;
+}
+
+@utility footer-text {
+  font-family: var(--font-family-spartan);
+  font-size: var(--font-size-footer);
+  line-height: var(--line-height-footer);
+  letter-spacing: var(--letter-spacing-footer);
+  font-weight: var(--font-weight-footer);
   text-transform: uppercase;
 }

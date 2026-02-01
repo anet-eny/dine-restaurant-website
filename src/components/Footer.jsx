@@ -10,7 +10,7 @@ export default function Footer({ address, openingTimes }) {
       style={{ paddingInline: PADDING }}
     >
       <img src={logo} alt={LOGO_ALT} />
-      <div className="flex flex-col lg:flex-row gap-8 lg:gap-60 body-2-text uppercase tracking-widest">
+      <div className="flex flex-col lg:flex-row gap-8 lg:gap-60 footer-text">
         <div>
           <p>{address.line1}</p>
           <p>{address.line2}</p>
