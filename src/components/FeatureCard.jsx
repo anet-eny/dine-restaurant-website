@@ -44,8 +44,8 @@ export default function FeatureCard({
           alt=""
           aria-hidden="true"
           className={`
-            hidden md:block absolute -z-10 md:w-[33vw] md:scale-200 lg:scale-120 lg:w-[60vw]
-            ${isImageLeft ? "top-1/3 left-0 md:-translate-y-20 lg:-translate-y-40" : "bottom-0 md:-translate-y-10 lg:-translate-y-20 right-0"}
+            hidden md:block absolute -z-10 md:w-[33vw] md:scale-200 lg:scale-80 lg:w-[60vw]
+            ${isImageLeft ? "top-1/3 left-0 md:-translate-y-20 lg:-translate-x-50 lg:-translate-y-60" : "bottom-0 md:-translate-y-10 lg:translate-x-50 lg:translate-y-0 right-0"}
           `}
         />
         {!isImageLeft && (
@@ -53,7 +53,7 @@ export default function FeatureCard({
             src={patternLines}
             alt=""
             aria-hidden="true"
-            className="hidden md:block absolute bottom-0 z-20 right-0 -translate-x-6 -translate-y-92"
+            className="hidden md:block absolute bottom-0 z-20 right-0 -translate-x-6 -translate-y-92 lg:-translate-y-82"
           />
         )}
       </div>
