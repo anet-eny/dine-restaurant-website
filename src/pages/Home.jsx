@@ -8,7 +8,7 @@ import Footer from "../components/Footer";
 
 export default function Home() {
   return (
-    <div className="max-w-8xl mx-auto">
+    <div className="max-w-360 mx-auto overflow-hidden">
       <HeroSection {...homeData.hero} />
       <FeaturesSection features={homeData.features} />
       <HighlightsSection {...homeData.highlights} />
