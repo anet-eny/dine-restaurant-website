@@ -7,7 +7,7 @@ export const reservationsData = {
       "We can't wait to host you. If you have any special requirements please feel free to call on the phone number below. We'll be happy to accommodate you.",
     buttonText: "RESERVE PLACE",
     buttonLink: "#reservation-form",
-    image: getResponsiveImages("reservations/hero-bg"),
+    image: getResponsiveImages("homepage/ready-bg"),
   },
 };
 
