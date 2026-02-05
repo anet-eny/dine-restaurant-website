@@ -49,6 +49,12 @@
   --letter-spacing-footer: clamp(0.125em, 0.3vw + 0.09em, 0.125em);
   --font-weight-footer: 400;
 
+  /* Reservation Form */
+  --font-size-reservation-form: 1.25rem;
+  --line-height-reservation-form: 1.75rem;
+  --letter-spacing-reservation-form: 0;
+  --font-weight-reservation-form: 400;
+
   /* Primary Colors */
   --color-beaver: oklch(61.94% 0.0526 60.49); /* #9e7f66 */
   --color-cod-gray: oklch(17.76% 0 89.88); /* #111111 */
@@ -122,4 +128,12 @@
   letter-spacing: var(--letter-spacing-footer);
   font-weight: var(--font-weight-footer);
   text-transform: uppercase;
+}
+
+@utility reservation-form-text {
+  font-family: var(--font-family-spartan);
+  font-size: var(--font-size-reservation-form);
+  line-height: var(--line-height-reservation-form);
+  letter-spacing: var(--letter-spacing-reservation-form);
+  font-weight: var(--font-weight-reservation-form);
 }
