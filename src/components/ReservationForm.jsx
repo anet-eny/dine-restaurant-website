@@ -18,13 +18,21 @@ const ReservationForm = ({
     month: "",
     day: "",
     year: "",
-    hours: "09",
-    minutes: "00",
+    hours: "",
+    minutes: "",
     period: "AM",
     people: defaultPeople,
   };
 
-  const requiredFields = ["name", "email", "month", "day", "year"];
+  const requiredFields = [
+    "name",
+    "email",
+    "month",
+    "day",
+    "year",
+    "hours",
+    "minutes",
+  ];
 
   const {
     formData,
@@ -101,11 +109,19 @@ const ReservationForm = ({
           </div>
 
           {/* Date Picker */}
-          <div className="md:flex md:items-center md:justify-between md:gap-8">
-            <label className="block md:inline-block mb-3 md:mb-0 md:whitespace-nowrap">
-              {fields.date.label}
-            </label>
-            <div className="flex gap-4">
+          <div className="md:flex md:items-center md:justify-between md:gap-2">
+            <div className="md:w-1/3 mb-3 md:mb-0">
+              <label className="block md:inline-block  md:whitespace-nowrap">
+                {fields.date.label}
+              </label>
+              {(errors.month || errors.day || errors.year) &&
+                (touched.month || touched.day || touched.year) && (
+                  <p className="text-red-500 text-xs mt-1">
+                    This field is incomplete
+                  </p>
+                )}
+            </div>
+            <div className="flex md:w-2/3 gap-4">
               <input
                 type="text"
                 name="month"
@@ -149,35 +165,49 @@ const ReservationForm = ({
                 } focus:outline-none focus:border-gray-900 transition-colors`}
               />
             </div>
-            {(errors.month || errors.day || errors.year) &&
-              (touched.month || touched.day || touched.year) && (
-                <p className="text-red-500 text-xs mt-1">
-                  This field is incomplete
-                </p>
-              )}
           </div>
 
           {/* Time Picker */}
-          <div className="md:flex md:items-center md:justify-between md:gap-8">
-            <label className="block md:inline-block mb-3 md:mb-0 md:whitespace-nowrap">
-              {fields.time.label}
-            </label>
-            <div className="flex gap-4 items-center">
+          <div className="md:flex md:items-center md:justify-between md:gap-2">
+            <div className="md:w-1/3 mb-3 md:mb-0">
+              <label className="block md:inline-block md:whitespace-nowrap">
+                {fields.time.label}
+              </label>
+              {(errors.hours || errors.minutes) &&
+                (touched.hours || touched.minutes) && (
+                  <p className="text-red-500 text-xs mt-1">
+                    This field is incomplete
+                  </p>
+                )}
+            </div>
+            <div className="flex md:w-2/3 gap-4 items-center">
               <input
                 type="text"
                 name="hours"
+                placeholder="09"
                 maxLength="2"
                 value={formData.hours}
                 onChange={handleChange}
-                className="w-1/3 px-4 py-3 border-b-2 border-gray-300 text-center focus:outline-none focus:border-gray-900 transition-colors"
+                onBlur={handleBlur}
+                className={`w-1/3 px-4 py-3 border-b-2 text-center ${
+                  errors.hours && touched.hours
+                    ? "border-red-500"
+                    : "border-gray-300"
+                } focus:outline-none focus:border-gray-900 transition-colors`}
               />
               <input
                 type="text"
                 name="minutes"
+                placeholder="00"
                 maxLength="2"
                 value={formData.minutes}
                 onChange={handleChange}
-                className="w-1/3 px-4 py-3 border-b-2 border-gray-300 text-center focus:outline-none focus:border-gray-900 transition-colors"
+                onBlur={handleBlur}
+                className={`w-1/3 px-4 py-3 border-b-2 text-center ${
+                  errors.minutes && touched.minutes
+                    ? "border-red-500"
+                    : "border-gray-300"
+                } focus:outline-none focus:border-gray-900 transition-colors`}
               />
               <select
                 name="period"

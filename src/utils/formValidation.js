@@ -57,6 +57,27 @@ export const validators = {
     }
     return "";
   },
+  hours: (value) => {
+    if (value === "") {
+      return "This field is incomplete";
+    }
+    const num = parseInt(value, 10);
+    if (num < 1 || num > 12) {
+      return "Invalid hour";
+    }
+    return "";
+  },
+
+  minutes: (value) => {
+    if (value === "") {
+      return "This field is incomplete";
+    }
+    const num = parseInt(value, 10);
+    if (num < 0 || num > 59) {
+      return "Invalid minutes";
+    }
+    return "";
+  },
 };
 
 export const validateField = (name, value) => {
