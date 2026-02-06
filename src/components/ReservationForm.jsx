@@ -1,8 +1,7 @@
 import Button from "./Button";
+import CustomSelect from "./CustomSelect";
 import { PADDING } from "../utils/constants";
 import { useReservationForm } from "../hooks/useReservationForm";
-import iconArrow from "../assets/icons/icon-arrow.svg";
-import iconCheck from "../assets/icons/icon-check.svg";
 import iconMinus from "../assets/icons/icon-minus.svg";
 import iconPlus from "../assets/icons/icon-plus.svg";
 
@@ -209,15 +208,13 @@ const ReservationForm = ({
                     : "border-gray-300"
                 } focus:outline-none focus:border-gray-900 transition-colors`}
               />
-              <select
+              <CustomSelect
                 name="period"
                 value={formData.period}
                 onChange={handleChange}
-                className="w-1/3 px-4 py-3 border-b-2 border-gray-300 focus:outline-none focus:border-gray-900 transition-colors appearance-none cursor-pointer"
-              >
-                <option value="AM">AM</option>
-                <option value="PM">PM</option>
-              </select>
+                options={["AM", "PM"]}
+                className="w-1/3"
+              />
             </div>
           </div>
 
