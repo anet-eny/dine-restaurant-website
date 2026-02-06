@@ -78,12 +78,12 @@ const ReservationForm = ({
               onBlur={handleBlur}
               className={`w-full px-4 py-3 border-b-2 ${
                 errors.name && touched.name
-                  ? "border-red-500"
+                  ? "border-crimson"
                   : "border-gray-300"
               } focus:outline-none focus:border-gray-900 transition-colors`}
             />
             {errors.name && touched.name && (
-              <p className="text-red-500 text-xs mt-1">{errors.name}</p>
+              <p className="text-crimson text-xs mt-1">{errors.name}</p>
             )}
           </div>
 
@@ -98,12 +98,12 @@ const ReservationForm = ({
               onBlur={handleBlur}
               className={`w-full px-4 py-3 border-b-2 ${
                 errors.email && touched.email
-                  ? "border-red-500"
+                  ? "border-crimson"
                   : "border-gray-300"
               } focus:outline-none focus:border-gray-900 transition-colors`}
             />
             {errors.email && touched.email && (
-              <p className="text-red-500 text-xs mt-1">{errors.email}</p>
+              <p className="text-crimson text-xs mt-1">{errors.email}</p>
             )}
           </div>
 
@@ -115,7 +115,7 @@ const ReservationForm = ({
               </label>
               {(errors.month || errors.day || errors.year) &&
                 (touched.month || touched.day || touched.year) && (
-                  <p className="text-red-500 text-xs mt-1">
+                  <p className="text-crimson text-xs mt-1">
                     This field is incomplete
                   </p>
                 )}
@@ -131,7 +131,7 @@ const ReservationForm = ({
                 onBlur={handleBlur}
                 className={`w-1/3 px-4 py-3 border-b-2 text-center ${
                   errors.month && touched.month
-                    ? "border-red-500"
+                    ? "border-crimson"
                     : "border-gray-300"
                 } focus:outline-none focus:border-gray-900 transition-colors`}
               />
@@ -145,7 +145,7 @@ const ReservationForm = ({
                 onBlur={handleBlur}
                 className={`w-1/3 px-4 py-3 border-b-2 text-center ${
                   errors.day && touched.day
-                    ? "border-red-500"
+                    ? "border-crimson"
                     : "border-gray-300"
                 } focus:outline-none focus:border-gray-900 transition-colors`}
               />
@@ -159,7 +159,7 @@ const ReservationForm = ({
                 onBlur={handleBlur}
                 className={`w-1/3 px-4 py-3 border-b-2 text-center ${
                   errors.year && touched.year
-                    ? "border-red-500"
+                    ? "border-crimson"
                     : "border-gray-300"
                 } focus:outline-none focus:border-gray-900 transition-colors`}
               />
@@ -174,7 +174,7 @@ const ReservationForm = ({
               </label>
               {(errors.hours || errors.minutes) &&
                 (touched.hours || touched.minutes) && (
-                  <p className="text-red-500 text-xs mt-1">
+                  <p className="text-crimson text-xs mt-1">
                     This field is incomplete
                   </p>
                 )}
@@ -190,7 +190,7 @@ const ReservationForm = ({
                 onBlur={handleBlur}
                 className={`w-1/3 px-4 py-3 border-b-2 text-center ${
                   errors.hours && touched.hours
-                    ? "border-red-500"
+                    ? "border-crimson"
                     : "border-gray-300"
                 } focus:outline-none focus:border-gray-900 transition-colors`}
               />
@@ -204,7 +204,7 @@ const ReservationForm = ({
                 onBlur={handleBlur}
                 className={`w-1/3 px-4 py-3 border-b-2 text-center ${
                   errors.minutes && touched.minutes
-                    ? "border-red-500"
+                    ? "border-crimson"
                     : "border-gray-300"
                 } focus:outline-none focus:border-gray-900 transition-colors`}
               />
