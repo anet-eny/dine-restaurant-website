@@ -222,14 +222,14 @@ const ReservationForm = ({
           </div>
 
           {/* People Counter */}
-          <div className="flex items-center justify-center gap-6 py-4">
+          <div className="flex items-center justify-between border-b-2 border-gray-300 gap-6 py-4">
             <button
               type="button"
               onClick={() => handlePeopleChange(-1)}
               disabled={formData.people === peopleOptions[0]}
-              className="text-2xl font-light text-gray-600 hover:text-gray-900 disabled:opacity-30 disabled:cursor-not-allowed w-8 h-8"
+              className="px-6 py-2 disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
             >
-              −
+              <img src={iconMinus} alt="Decrease" className="w-3" />
             </button>
             <span className="tracking-[.016em] leading-6 font-bold">
               {formData.people} {formData.people === 1 ? "person" : "people"}
@@ -240,9 +240,9 @@ const ReservationForm = ({
               disabled={
                 formData.people === peopleOptions[peopleOptions.length - 1]
               }
-              className="text-2xl font-light text-gray-600 hover:text-gray-900 disabled:opacity-30 disabled:cursor-not-allowed w-8 h-8"
+              className="px-6 py-2 disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
             >
-              +
+              <img src={iconPlus} alt="Increase" className="w-3" />
             </button>
           </div>
 
