@@ -63,6 +63,7 @@
   --color-mirage: oklch(22.09% 0.0353 278.24); /* #17192b */
   --color-ebony-clay: oklch(28.77% 0.0242 261.14); /* #242b37 */
   --color-shuttle-gray: oklch(51.11% 0.0317 260.26); /* #5c6779 */
+  --color-crimson: oklch(52.48% 0.1652 23.77); /* #b54949 */
 }
 
 @utility heading-xl {
