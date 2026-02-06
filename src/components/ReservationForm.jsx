@@ -62,7 +62,7 @@ const ReservationForm = ({
       className="bg-white py-20"
       style={{ paddingInline: PADDING }}
     >
-      <div className="max-w-xl mx-auto bg-white reservation-form-text shadow-2xl p-8 md:p-12">
+      <div className="relative z-10 max-w-xl mx-auto lg:mx-0 lg:ml-auto bg-white reservation-form-text shadow-2xl p-8 md:p-12 -mt-50 md:-mt-80">
         <form
           onSubmit={handleSubmit(onSubmitSuccess)}
           className="flex flex-col gap-8"
