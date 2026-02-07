@@ -1,10 +1,17 @@
+import { Link } from "react-router-dom";
 import Button from "./Button";
 import logo from "../assets/logo.svg";
 import { PADDING } from "../utils/constants";
 
 const LOGO_ALT = "dine";
 
-export default function HeroSection({ title, description, buttonText, image }) {
+export default function HeroSection({
+  title,
+  description,
+  buttonText,
+  buttonLink,
+  image,
+}) {
   return (
     <header
       className="relative min-h-200 lg:h-200 flex items-center lg:items-start justify-center lg:justify-start bg-cod-gray"
@@ -31,9 +38,11 @@ export default function HeroSection({ title, description, buttonText, image }) {
         <div className="lg:mt-auto lg:mb-48">
           <h1 className="py-7 heading-xl">{title}</h1>
           <p className="body-text">{description}</p>
-          <Button theme="light" className="mt-12">
-            {buttonText}
-          </Button>
+          <Link to={buttonLink}>
+            <Button theme="light" className="mt-12">
+              {buttonText}
+            </Button>
+          </Link>
         </div>
       </div>
     </header>

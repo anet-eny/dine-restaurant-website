@@ -6,6 +6,7 @@ export const homeData = {
     description:
       "Experience our seasonal menu in beautiful country surroundings. Eat the freshest produce from the comfort of our farmhouse.",
     buttonText: "Book a table",
+    buttonLink: "/reservations",
     image: getResponsiveImages("homepage/hero-bg"),
   },
   features: [
