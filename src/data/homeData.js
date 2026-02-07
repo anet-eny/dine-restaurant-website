@@ -84,6 +84,7 @@ export const homeData = {
         image: getResponsiveImages("homepage/social-events"),
       },
     ],
+    buttonLink: "/reservations",
   },
   reservationCTA: {
     title: "Ready to make a reservation?",

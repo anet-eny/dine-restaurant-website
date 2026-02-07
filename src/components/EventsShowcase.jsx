@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Button from "./Button";
 import { PADDING } from "../utils/constants";
 import curvePattern from "../assets/patterns/pattern-curve-top-right.svg";
 import patternLines from "../assets/patterns/pattern-lines.svg";
 
-export default function EventsShowcase({ events }) {
+export default function EventsShowcase({ events, buttonLink }) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   //   useEffect(() => {
@@ -74,9 +75,11 @@ export default function EventsShowcase({ events }) {
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left text-ebony-clay gap-6 mt-10 order-2 lg:order-1">
             <h2 className="heading-l ">{activeEvent.title}</h2>
             <p className="body-text">{activeEvent.description}</p>
-            <Button theme="dark" className="mt-4">
-              {activeEvent.buttonText}
-            </Button>
+            <Link to={buttonLink}>
+              <Button theme="dark" className="mt-4">
+                {activeEvent.buttonText}
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
