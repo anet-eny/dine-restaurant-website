@@ -10,6 +10,7 @@ const ReservationForm = ({
   peopleOptions,
   defaultPeople,
   fields,
+  className = "",
 }) => {
   const initialValues = {
     name: "",
@@ -59,7 +60,7 @@ const ReservationForm = ({
   return (
     <div
       id="reservation-form"
-      className="absolute w-full max-w-xl left-1/2 -translate-x-1/2 lg:relative z-10 bg-white reservation-form-text shadow-2xl p-8 md:p-12"
+      className={`max-w-xl bg-white reservation-form-text shadow-2xl p-8 md:p-12 ${className}`}
     >
       <form
         onSubmit={handleSubmit(onSubmitSuccess)}

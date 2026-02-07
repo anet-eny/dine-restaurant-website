@@ -46,7 +46,7 @@ export default function Reservations() {
         {/* Two-column grid layout for lg+ */}
         <div className="relative lg:grid lg:grid-cols-2 lg:gap-8 lg:h-full">
           {/* Left column - Hero content */}
-          <div className="flex flex-col items-center lg:items-start justify-between text-center lg:text-left text-white gap-8 py-10 lg:h-full">
+          <div className="flex flex-col items-center lg:items-start justify-between text-center lg:text-left text-white gap-8 py-10 lg:pb-30 lg:h-full">
             <img
               src={logo}
               alt={LOGO_ALT}
@@ -60,7 +60,10 @@ export default function Reservations() {
           </div>
 
           {/* Right column - Form */}
-          <ReservationForm {...reservationFormConfig} />
+          <ReservationForm
+            {...reservationFormConfig}
+            className="absolute left-1/2 -translate-x-1/2 lg:relative z-10 w-full mt-10 lg:translate-y-64"
+          />
         </div>
       </div>
 
