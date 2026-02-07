@@ -2,10 +2,12 @@ import {
   reservationsData,
   reservationFormConfig,
 } from "../data/reservationsData";
-import { PADDING } from "../utils/constants";
-import logo from "../assets/logo.svg";
 import Button from "../components/Button";
 import ReservationForm from "../components/ReservationForm";
+import { PADDING } from "../utils/constants";
+import logo from "../assets/logo.svg";
+import curvePattern from "../assets/patterns/pattern-curve-bottom-right.svg";
+import patternLines from "../assets/patterns/pattern-lines.svg";
 
 const LOGO_ALT = "dine";
 
@@ -21,9 +23,9 @@ export default function Reservations() {
   };
 
   return (
-    <div>
+    <div className="max-w-384 mx-auto">
       <div
-        className="relative min-h-150 lg:h-150"
+        className="relative  min-h-150 lg:h-150 "
         style={{ paddingInline: PADDING }}
       >
         <picture className="absolute inset-0" aria-hidden="true">
@@ -46,7 +48,7 @@ export default function Reservations() {
         {/* Two-column grid layout for lg+ */}
         <div className="relative lg:grid lg:grid-cols-2 lg:gap-8 lg:h-full">
           {/* Left column - Hero content */}
-          <div className="flex flex-col items-center lg:items-start justify-between text-center lg:text-left text-white gap-8 py-10 lg:pb-30 lg:h-full">
+          <div className="flex flex-col items-center lg:items-start justify-between text-center lg:text-left text-white gap-8 py-10 lg:pb-36 lg:h-full">
             <img
               src={logo}
               alt={LOGO_ALT}
@@ -62,12 +64,24 @@ export default function Reservations() {
           {/* Right column - Form */}
           <ReservationForm
             {...reservationFormConfig}
-            className="absolute left-1/2 -translate-x-1/2 lg:relative z-10 w-full mt-10 lg:translate-y-64"
+            className="absolute left-1/2 -translate-x-1/2 lg:relative z-10 w-full mt-10 lg:translate-y-56"
           />
         </div>
       </div>
-
-      <section className="bg-white py-20"></section>
+      <section className="relative w-full min-h-80">
+        <img
+          src={curvePattern}
+          alt=""
+          aria-hidden="true"
+          className="hidden lg:block absolute top-0 left-0 "
+        />
+        <img
+          src={patternLines}
+          alt=""
+          aria-hidden="true"
+          className="hidden lg:block absolute top-52 left-176"
+        />
+      </section>
     </div>
   );
 }
