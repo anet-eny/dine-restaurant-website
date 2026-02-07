@@ -2,8 +2,10 @@ import {
   reservationsData,
   reservationFormConfig,
 } from "../data/reservationsData";
+import { homeData } from "../data/homeData";
 import Button from "../components/Button";
 import ReservationForm from "../components/ReservationForm";
+import Footer from "../components/Footer";
 import { PADDING } from "../utils/constants";
 import logo from "../assets/logo.svg";
 import curvePattern from "../assets/patterns/pattern-curve-bottom-right.svg";
@@ -68,7 +70,7 @@ export default function Reservations() {
           />
         </div>
       </div>
-      <section className="relative w-full min-h-80">
+      <section className="relative w-full min-h-160 md:min-h-120 lg:min-h-80">
         <img
           src={curvePattern}
           alt=""
@@ -82,6 +84,7 @@ export default function Reservations() {
           className="hidden lg:block absolute top-52 left-176"
         />
       </section>
+      <Footer {...homeData.footer} />
     </div>
   );
 }
