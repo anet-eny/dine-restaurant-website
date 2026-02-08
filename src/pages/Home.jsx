@@ -8,11 +8,15 @@ import Footer from "../components/Footer";
 
 export default function Home() {
   return (
-    <div className="max-w-384 mx-auto overflow-hidden">
+    <div className="w-full overflow-hidden">
       <HeroSection {...homeData.hero} />
-      <FeaturesSection features={homeData.features} />
+      <div className="max-w-384 mx-auto">
+        <FeaturesSection features={homeData.features} />
+      </div>
       <HighlightsSection {...homeData.highlights} />
-      <EventsShowcase {...homeData.eventsShowcase} />
+      <div className="max-w-384 mx-auto">
+        <EventsShowcase {...homeData.eventsShowcase} />
+      </div>
       <ReservationsCTA {...homeData.reservationCTA} />
       <Footer {...homeData.footer} />
     </div>

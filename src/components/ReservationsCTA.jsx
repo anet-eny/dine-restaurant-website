@@ -9,7 +9,7 @@ export default function ReservationsCTA({
   image,
 }) {
   return (
-    <section className="relative py-20" style={{ paddingInline: PADDING }}>
+    <section className="relative">
       <picture className="absolute inset-0" aria-hidden="true">
         <source
           media="(min-width: 64rem)"
@@ -26,12 +26,16 @@ export default function ReservationsCTA({
           className="w-full h-full object-cover"
         />
       </picture>
-
-      <div className="relative flex flex-col lg:flex-row items-center justify-between text-center gap-8">
-        <h1 className="text-white heading-l">{title}</h1>
-        <Link to={buttonLink}>
-          <Button theme="light">{buttonText}</Button>
-        </Link>
+      <div
+        className="max-w-384 mx-auto py-20"
+        style={{ paddingInline: PADDING }}
+      >
+        <div className="relative flex flex-col lg:flex-row items-center justify-between text-center gap-8">
+          <h1 className="text-white heading-l">{title}</h1>
+          <Link to={buttonLink}>
+            <Button theme="light">{buttonText}</Button>
+          </Link>
+        </div>
       </div>
     </section>
   );

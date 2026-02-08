@@ -25,11 +25,8 @@ export default function Reservations() {
   };
 
   return (
-    <div className="max-w-384 mx-auto">
-      <div
-        className="relative  min-h-150 lg:h-150 "
-        style={{ paddingInline: PADDING }}
-      >
+    <div className="w-full overflow-hidden">
+      <div className="relative  min-h-150 lg:h-150 w-full">
         <picture className="absolute inset-0" aria-hidden="true">
           <source
             media="(min-width: 64rem)"
@@ -48,7 +45,10 @@ export default function Reservations() {
         </picture>
 
         {/* Two-column grid layout for lg+ */}
-        <div className="relative lg:grid lg:grid-cols-2 lg:gap-8 lg:h-full">
+        <div
+          className="relative max-w-384 mx-auto lg:grid lg:grid-cols-2 lg:gap-8 lg:h-full"
+          style={{ paddingInline: PADDING }}
+        >
           {/* Left column - Hero content */}
           <div className="flex flex-col items-center lg:items-start justify-between text-center lg:text-left text-white gap-8 py-10 lg:pb-36 lg:h-full">
             <img
@@ -71,18 +71,20 @@ export default function Reservations() {
         </div>
       </div>
       <section className="relative w-full min-h-160 md:min-h-120 lg:min-h-80">
-        <img
-          src={curvePattern}
-          alt=""
-          aria-hidden="true"
-          className="hidden lg:block absolute top-0 left-0 "
-        />
-        <img
-          src={patternLines}
-          alt=""
-          aria-hidden="true"
-          className="hidden lg:block absolute top-52 left-176"
-        />
+        <div className="max-w-384 mx-auto relative h-full">
+          <img
+            src={curvePattern}
+            alt=""
+            aria-hidden="true"
+            className="hidden lg:block absolute top-0 left-0 "
+          />
+          <img
+            src={patternLines}
+            alt=""
+            aria-hidden="true"
+            className="hidden lg:block absolute top-52 left-176"
+          />
+        </div>
       </section>
       <Footer {...homeData.footer} />
     </div>
