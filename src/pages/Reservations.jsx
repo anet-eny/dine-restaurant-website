@@ -46,7 +46,7 @@ export default function Reservations() {
 
         {/* Two-column grid layout for lg+ */}
         <div
-          className="relative max-w-384 mx-auto lg:grid lg:grid-cols-2 lg:gap-8 lg:h-full"
+          className={`${CONTAINER_CLASS} relative lg:grid lg:grid-cols-2 lg:gap-8 lg:h-full`}
           style={{ paddingInline: PADDING }}
         >
           {/* Left column - Hero content */}
