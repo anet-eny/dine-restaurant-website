@@ -6,7 +6,7 @@ import { homeData } from "../data/homeData";
 import Button from "../components/Button";
 import ReservationForm from "../components/ReservationForm";
 import Footer from "../components/Footer";
-import { PADDING } from "../utils/constants";
+import { PADDING, CONTAINER_CLASS } from "../utils/constants";
 import logo from "../assets/logo.svg";
 import curvePattern from "../assets/patterns/pattern-curve-bottom-right.svg";
 import patternLines from "../assets/patterns/pattern-lines.svg";
@@ -26,7 +26,7 @@ export default function Reservations() {
 
   return (
     <div className="w-full overflow-hidden">
-      <div className="relative  min-h-150 lg:h-150 w-full">
+      <div className="relative min-h-150 lg:h-150 w-full">
         <picture className="absolute inset-0" aria-hidden="true">
           <source
             media="(min-width: 64rem)"
@@ -71,7 +71,7 @@ export default function Reservations() {
         </div>
       </div>
       <section className="relative w-full min-h-160 md:min-h-120 lg:min-h-80">
-        <div className="max-w-384 mx-auto relative h-full">
+        <div className={`${CONTAINER_CLASS} relative h-full`}>
           <img
             src={curvePattern}
             alt=""
