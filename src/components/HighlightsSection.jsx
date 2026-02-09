@@ -1,12 +1,12 @@
 import HighlightCard from "./HighlightCard";
 import patternDivide from "../assets/patterns/pattern-divide.svg";
-import { PADDING } from "../utils/constants";
+import { PADDING, CONTAINER_CLASS } from "../utils/constants";
 
 export default function HighlightsSection({ title, description, items }) {
   return (
     <section className="relative z-5 bg-cod-gray">
       <div
-        className="max-w-384 mx-auto flex flex-col lg:flex-row lg:gap-20 text-white lg:-mt-15 lg:pt-45!"
+        className={`${CONTAINER_CLASS} flex flex-col lg:flex-row lg:gap-20 text-white lg:-mt-15 lg:pt-45!`}
         style={{ padding: PADDING }}
       >
         <div className="lg:flex-2 text-center lg:text-left md:px-20 lg:px-0 mb-16">

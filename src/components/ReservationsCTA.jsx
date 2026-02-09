@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Button from "./Button";
-import { PADDING } from "../utils/constants";
+import { PADDING, CONTAINER_CLASS } from "../utils/constants";
 
 export default function ReservationsCTA({
   title,
@@ -27,7 +27,7 @@ export default function ReservationsCTA({
         />
       </picture>
       <div
-        className="max-w-384 mx-auto py-20"
+        className={`${CONTAINER_CLASS} py-20`}
         style={{ paddingInline: PADDING }}
       >
         <div className="relative flex flex-col lg:flex-row items-center justify-between text-center gap-8">

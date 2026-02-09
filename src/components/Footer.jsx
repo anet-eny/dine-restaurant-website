@@ -1,5 +1,5 @@
 import logo from "../assets/logo.svg";
-import { PADDING } from "../utils/constants";
+import { PADDING, CONTAINER_CLASS } from "../utils/constants";
 
 const LOGO_ALT = "dine";
 
@@ -7,7 +7,7 @@ export default function Footer({ address, openingTimes }) {
   return (
     <footer className="bg-cod-gray">
       <div
-        className="max-w-384 mx-auto flex flex-col md:flex-row items-center text-center md:text-left gap-8 md:gap-36 lg:gap-60 text-white py-12"
+        className={`${CONTAINER_CLASS} flex flex-col md:flex-row items-center text-center md:text-left gap-8 md:gap-36 lg:gap-60 text-white py-12`}
         style={{ paddingInline: PADDING }}
       >
         <img src={logo} alt={LOGO_ALT} />

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Button from "./Button";
 import logo from "../assets/logo.svg";
-import { PADDING } from "../utils/constants";
+import { PADDING, CONTAINER_CLASS } from "../utils/constants";
 
 const LOGO_ALT = "dine";
 
@@ -31,7 +31,7 @@ export default function HeroSection({
         />
       </picture>
       <div
-        className="relative max-w-384 h-full mx-auto flex items-center lg:items-start justify-center lg:justify-start"
+        className={`${CONTAINER_CLASS} relative flex items-center lg:items-start justify-center lg:justify-start`}
         style={{ paddingInline: PADDING }}
       >
         <div className="relative flex flex-col items-center lg:items-start justify-center lg:justify-start lg:max-w-120 text-white text-center lg:text-left mt-64 lg:mt-20 lg:h-full">
