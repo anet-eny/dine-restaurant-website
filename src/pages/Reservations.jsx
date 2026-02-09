@@ -47,7 +47,7 @@ export default function Reservations() {
         {/* Two-column grid layout for lg+ */}
         <div
           className={`${CONTAINER_CLASS} relative lg:grid lg:grid-cols-2 lg:gap-8 lg:h-full`}
-          style={{ paddingInline: PADDING }}
+          style={{ paddingInline: PADDING, "--form-padding": PADDING }}
         >
           {/* Left column - Hero content */}
           <div className="flex flex-col items-center lg:items-start justify-between text-center lg:text-left text-white gap-8 py-10 lg:pb-36 lg:h-full">
@@ -66,7 +66,7 @@ export default function Reservations() {
           {/* Right column - Form */}
           <ReservationForm
             {...reservationFormConfig}
-            className="absolute left-1/2 -translate-x-1/2 lg:relative z-10 w-full mt-10 lg:translate-y-56"
+            className="absolute left-1/2 -translate-x-1/2 lg:relative z-10 w-[calc(100%-2*var(--form-padding))] lg:w-full mt-10 lg:translate-y-56"
           />
         </div>
       </div>
