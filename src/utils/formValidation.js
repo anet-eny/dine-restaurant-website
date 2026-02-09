@@ -21,6 +21,9 @@ export const validators = {
     if (value === "") {
       return "This field is incomplete";
     }
+    if (!/^\d+$/.test(value)) {
+      return "Please enter numbers only";
+    }
     return "";
   },
 
@@ -57,10 +60,11 @@ export const validators = {
     }
     return "";
   },
+
   hours: (value) => {
-    if (value === "") {
-      return "This field is incomplete";
-    }
+    const error = validators.dateField(value);
+    if (error) return error;
+
     const num = parseInt(value, 10);
     if (num < 1 || num > 12) {
       return "Invalid hour";
@@ -69,9 +73,9 @@ export const validators = {
   },
 
   minutes: (value) => {
-    if (value === "") {
-      return "This field is incomplete";
-    }
+    const error = validators.dateField(value);
+    if (error) return error;
+
     const num = parseInt(value, 10);
     if (num < 0 || num > 59) {
       return "Invalid minutes";
