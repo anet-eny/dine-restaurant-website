@@ -31,10 +31,10 @@ export default function HeroSection({
         />
       </picture>
       <div
-        className="relative max-w-384 mx-auto flex items-center lg:items-start justify-center lg:justify-start"
+        className="relative max-w-384 h-full mx-auto flex items-center lg:items-start justify-center lg:justify-start"
         style={{ paddingInline: PADDING }}
       >
-        <div className="relative flex flex-col items-center lg:items-start justify-center lg:justify-start lg:max-w-120 text-white text-center lg:text-left mt-[clamp(4rem,5vw,6rem)] lg:h-full">
+        <div className="relative flex flex-col items-center lg:items-start justify-center lg:justify-start lg:max-w-120 text-white text-center lg:text-left mt-64 lg:mt-20 lg:h-full">
           <img src={logo} alt={LOGO_ALT} />
           <div className="lg:mt-auto lg:mb-48">
             <h1 className="py-7 heading-xl">{title}</h1>
