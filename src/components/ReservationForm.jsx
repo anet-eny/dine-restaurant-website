@@ -113,7 +113,7 @@ const ReservationForm = ({
             {(errors.month || errors.day || errors.year) &&
               (touched.month || touched.day || touched.year) && (
                 <p className="text-crimson text-xs mt-1">
-                  This field is incomplete
+                  {errors.month || errors.day || errors.year}
                 </p>
               )}
           </div>
@@ -170,7 +170,7 @@ const ReservationForm = ({
             {(errors.hours || errors.minutes) &&
               (touched.hours || touched.minutes) && (
                 <p className="text-crimson text-xs mt-1">
-                  This field is incomplete
+                  {errors.hours || errors.minutes}
                 </p>
               )}
           </div>
