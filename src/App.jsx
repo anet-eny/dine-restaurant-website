@@ -19,8 +19,10 @@ function AppRoutes() {
 }
 
 function App() {
+  const basename =
+    process.env.NODE_ENV === "production" ? "/dine-restaurant-website" : "";
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <AppRoutes />
     </BrowserRouter>
   );
