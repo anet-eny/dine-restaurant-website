@@ -48,6 +48,12 @@ export const useReservationForm = (initialValues, requiredFields) => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
+  const resetForm = () => {
+    setFormData(initialValues);
+    setErrors({});
+    setTouched({});
+  };
+
   return {
     formData,
     errors,
@@ -56,5 +62,6 @@ export const useReservationForm = (initialValues, requiredFields) => {
     handleBlur,
     handleSubmit,
     updateField,
+    resetForm,
   };
 };
