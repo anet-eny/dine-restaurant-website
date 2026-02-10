@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Button from "./Button";
 import CustomSelect from "./CustomSelect";
 import { PADDING } from "../utils/constants";
@@ -42,7 +43,10 @@ const ReservationForm = ({
     handleBlur,
     handleSubmit,
     updateField,
+    resetForm,
   } = useReservationForm(initialValues, requiredFields);
+
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handlePeopleChange = (increment) => {
     const currentIndex = peopleOptions.indexOf(formData.people);
@@ -54,7 +58,13 @@ const ReservationForm = ({
 
   const onSubmitSuccess = (data) => {
     console.log("Form submitted:", data);
-    // API call zde
+
+    setIsSubmitted(true);
+
+    setTimeout(() => {
+      setIsSubmitted(false);
+      resetForm();
+    }, 2000);
   };
 
   return (
@@ -240,7 +250,7 @@ const ReservationForm = ({
 
         {/* Submit Button */}
         <Button type="submit" theme="dark">
-          {buttonText}
+          {isSubmitted ? "SUBMITTED ✓" : buttonText}
         </Button>
       </form>
     </div>
