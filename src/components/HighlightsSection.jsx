@@ -1,6 +1,6 @@
 import HighlightCard from "./HighlightCard";
-import patternDivide from "../assets/patterns/pattern-divide.svg";
 import { PADDING, CONTAINER_CLASS } from "../utils/constants";
+import patternDivide from "../assets/patterns/pattern-divide.svg";
 
 export default function HighlightsSection({ title, description, items }) {
   return (

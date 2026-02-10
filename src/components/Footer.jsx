@@ -1,5 +1,5 @@
-import logo from "../assets/logo.svg";
 import { PADDING, CONTAINER_CLASS } from "../utils/constants";
+import logo from "../assets/logo.svg";
 
 const LOGO_ALT = "dine";
 

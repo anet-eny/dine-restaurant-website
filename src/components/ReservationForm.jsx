@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Button from "./Button";
 import CustomSelect from "./CustomSelect";
-import { PADDING } from "../utils/constants";
 import { useReservationForm } from "../hooks/useReservationForm";
 import iconMinus from "../assets/icons/icon-minus.svg";
 import iconPlus from "../assets/icons/icon-plus.svg";
