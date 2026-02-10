@@ -8,12 +8,12 @@ import patternLines from "../assets/patterns/pattern-lines.svg";
 export default function EventsShowcase({ events, buttonLink }) {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  //   useEffect(() => {
-  //     const interval = setInterval(() => {
-  //       setActiveIndex((prev) => (prev + 1) % events.length);
-  //     }, 3000);
-  //     return () => clearInterval(interval);
-  //   }, [events.length]);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % events.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [events.length]);
 
   const activeEvent = events[activeIndex];
 
